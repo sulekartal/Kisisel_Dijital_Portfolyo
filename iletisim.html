@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <div id="ustkisim">
+      <header id="baslik">
+        <nav id="profil">
+          <a href="anasayfa.html"
+            ><img src="resimler/profil.jpeg" style="width: 100px; height: 90px"
+          /></a>
+        </nav>
+        <nav id="instagram">
+          <a href="https://www.instagram.com/sulekkartal/"
+            ><img
+              src="resimler/Instagram_logo_2022.svg.png"
+              style="width: 40px"
+          /></a>
+        </nav>
+        <nav id="linkedin">
+          <a href="https://www.linkedin.com/in/%C5%9Fule-kartal-b15688277/"
+            ><img src="resimler/LinkedIn_logo_initials.png" style="width: 40px"
+          /></a>
+        </nav>
+        <nav id="github">
+          <a href="https://github.com/sulekartal"
+            ><img
+              src="resimler/GitHub-Mark-ea2971cee799.png"
+              style="width: 40px"
+          /></a>
+        </nav>
+
+        <nav class="linkler">
+          <a href="anasayfa.html">Anasayfa</a> |
+          <a href="hakkinda.html">Hakkında</a> |
+          <a href="sertifikalar.html">Sertifikalar</a> |
+          <a href="calismalar.html">Çalışmalar</a> |
+          <a href="iletisim.html">İletişim</a>
+        </nav>
+      </header>
+    </div>
+    <h3 id="iletisim1">İletişim Bilgileri</h3>
+    <form id="iletisim">
+      email : sule_krtl00@outlook.com<br />
+      adres : Yahya Kemal Mahallesi Güzeldere Caddesi 46/3 Kağıthane/İstanbul
+    </form>
+
+    <form id="form" autocomplete="on">
+      <table id="tablo">
+        <tr>
+          <td>Ad Soyad</td>
+          <td>
+            <input type="text" required placeholder="ad soyad" maxlength="25" />
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>
+            <input type="email" required placeholder="mail" maxlength="50" />
+          </td>
+        </tr>
+        <tr>
+          <td>Telefon</td>
+          <td>
+            <input
+              type="tel"
+              pattern="5[0-9]{9}"
+              maxlength="10"
+              minlength="10"
+              placeholder="5xx xxx xx xx"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Açıklama</td>
+          <td>
+            <!-- <input
+              type="text"
+              style="width: 160px; height: 100px"
+              size="10"
+              required
+              placeholder="açıklama"
+              maxlength="150"
+            /> -->
+            <textarea
+              style="width: 160px; height: 100px"
+              size="10"
+              required
+              placeholder="açıklama"
+              maxlength="150"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" /></td>
+          <td><input type="reset" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
