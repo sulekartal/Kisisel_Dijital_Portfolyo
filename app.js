@@ -25,14 +25,22 @@ themeToggle?.addEventListener("click", () => {
   setTheme(isDark ? "light" : "dark");
 });
 
-// Aktif Menü (multi-page - NET)
+// Aktif Menü – GitHub Pages Uyumlu
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  let current = window.location.pathname.split("/").pop() || "index.html";
+  current = current.toLowerCase();
 
-  document.querySelectorAll(".linkler a").forEach((link) => {
-    const linkPage = link.getAttribute("href");
-    if (linkPage === currentPage) {
-      link.classList.add("active-page");
+  document.querySelectorAll(".linkler a").forEach((a) => {
+    const href = (a.getAttribute("href") || "").toLowerCase();
+    if (!href) return;
+
+    // sadece dosya adını karşılaştır
+    const target = href.split("/").pop();
+
+    if (target === current) {
+      a.classList.add("active-page");
+    } else {
+      a.classList.remove("active-page");
     }
   });
 });
