@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css.css" />
+    <title>Sertifikalar - Şule Kartal</title>
   </head>
   <body>
     <div id="ustkisim">
@@ -13,24 +15,36 @@
           /></a>
         </nav>
         <nav id="instagram">
-          <a href="https://www.instagram.com/sulekkartal/"
+          <a href="https://www.instagram.com/sulekkartal/" target="_blank"
             ><img
               src="resimler/Instagram_logo_2022.svg.png"
               style="width: 40px"
           /></a>
         </nav>
         <nav id="linkedin">
-          <a href="https://www.linkedin.com/in/%C5%9Fule-kartal-b15688277/"
+          <a
+            href="https://www.linkedin.com/in/%C5%9Fule-kartal-b15688277/"
+            target="_blank"
             ><img src="resimler/LinkedIn_logo_initials.png" style="width: 40px"
           /></a>
         </nav>
         <nav id="github">
-          <a href="https://github.com/sulekartal"
+          <a href="https://github.com/sulekartal" target="_blank"
             ><img
               src="resimler/GitHub-Mark-ea2971cee799.png"
               style="width: 40px"
           /></a>
         </nav>
+
+        <!-- TEMA BUTONU -->
+        <button
+          id="themeToggle"
+          class="tema-btn"
+          type="button"
+          aria-label="Tema Değiştir"
+        >
+          🌙
+        </button>
 
         <nav class="linkler">
           <a href="index.html">Anasayfa</a> |
@@ -42,20 +56,71 @@
       </header>
     </div>
 
-    <!-- <h1>Sertifikalar</h1> -->
     <div id="sertifika">
-      <img src="Sertifikalar/c_dili.png" class="serti" />
-      <img src="Sertifikalar/css.png" class="serti" />
-      <img src="Sertifikalar/etkili_iletisim.png" class="serti" />
-      <img src="Sertifikalar/html.png" class="serti" />
-      <img src="Sertifikalar/ingilizce.png" class="serti" />
-      <img src="Sertifikalar/js.png" class="serti" />
-      <img src="Sertifikalar/kariyer.png" class="serti" />
-      <img src="Sertifikalar/microfon.png" class="serti" />
-      <img src="Sertifikalar/ofis.png" class="serti" />
-      <img src="Sertifikalar/talent_coders.png" class="serti" />
-      <img src="Sertifikalar/turkcell.png" class="serti" />
-      <img src="Sertifikalar/web_tasarim.png" class="serti" />
+      <img src="Sertifikalar/c_dili.png" class="serti zoomable" alt="C Dili" />
+      <img src="Sertifikalar/css.png" class="serti zoomable" alt="CSS" />
+      <img
+        src="Sertifikalar/etkili_iletisim.png"
+        class="serti zoomable"
+        alt="Etkili İletişim"
+      />
+      <img src="Sertifikalar/html.png" class="serti zoomable" alt="HTML" />
+      <img
+        src="Sertifikalar/ingilizce.png"
+        class="serti zoomable"
+        alt="İngilizce"
+      />
+      <img src="Sertifikalar/js.png" class="serti zoomable" alt="JavaScript" />
+      <img
+        src="Sertifikalar/kariyer.png"
+        class="serti zoomable"
+        alt="Kariyer"
+      />
+      <img
+        src="Sertifikalar/microfon.png"
+        class="serti zoomable"
+        alt="Mikrofon"
+      />
+      <img src="Sertifikalar/ofis.png" class="serti zoomable" alt="Ofis" />
+      <img
+        src="Sertifikalar/talent_coders.png"
+        class="serti zoomable"
+        alt="Talent Coders"
+      />
+      <img
+        src="Sertifikalar/turkcell.png"
+        class="serti zoomable"
+        alt="Turkcell"
+      />
+      <img
+        src="Sertifikalar/web_tasarim.png"
+        class="serti zoomable"
+        alt="Web Tasarım"
+      />
     </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-close="true"></div>
+      <figure
+        class="lightbox-content"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Görsel önizleme"
+      >
+        <button
+          class="lightbox-close"
+          type="button"
+          aria-label="Kapat"
+          data-close="true"
+        >
+          ✕
+        </button>
+        <img id="lightboxImg" src="" alt="" />
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
